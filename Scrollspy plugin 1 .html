@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Horizontal Scrollspy with Dropdown</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            position: relative;
+        }
+        p {
+            font-size: 20px;
+        }
+        .section {
+            padding-top: 50px;
+            height: 500px;
+        }
+        #section1 { background-color: rgba(255, 250, 254, 0.986); color: rgb(173, 212, 33); }
+        #section2 { background-color: white; color: rgba(146, 70, 102, 0.308); }
+        #section3 { background-color: #f9f9f9; color: rgba(123, 212, 163, 0.829); }
+        #section4 { background-color: #fff3e6; color: #8B4513; }
+        #section5 { background-color: #e6f7ff; color: #1E90FF; }
+    </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="70">
+
+<!-- Navbar -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Sweet Delights</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="#section1">Home</a></li>
+        <li><a href="#section2">About</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#section3">Custom Cakes</a></li>
+            <li><a href="#section4">Pastries</a></li>
+            <li><a href="#section5">Workshops</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Sections -->
+<div id="section1" class="container-fluid section">
+    <h1>Home</h1>
+    <h3><i>Welcome to Sweet Delights!</i></h3>
+    <p>Indulge in the finest baked treats made fresh every day. From fluffy cakes to crispy pastries, Sweet Delights is your go-to place for delicious moments!</p>
+</div>
+
+<div id="section2" class="container-fluid section">
+    <h1>About</h1>
+    <h3>Our Story</h3>
+    <p>Sweet Delights started as a small family bakery with a passion for quality and flavor. Today, we continue to delight our community with handmade pastries, cakes, and desserts crafted with love and care.</p>
+</div>
+
+<div id="section3" class="container-fluid section">
+    <h1>Custom Cakes</h1>
+    <p>Personalized cakes for birthdays, weddings, and special occasions, designed to make every celebration unforgettable.</p>
+</div>
+
+<div id="section4" class="container-fluid section">
+    <h1>Pastries</h1>
+    <p>Fresh croissants, muffins, and cookies baked daily to bring sweetness to your day.</p>
+</div>
+
+<div id="section5" class="container-fluid section">
+    <h1>Workshops</h1>
+    <p>Learn to bake like a pro in our fun, hands-on sessions designed for beginners and enthusiasts alike.</p>
+</div>
+
+</body>
+</html>
