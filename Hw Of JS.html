@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>Random Numbers and Date</title>
+    <style>
+      .output {
+        background-color: azure;
+        padding: 10px;
+        border-radius: 10px;
+        font-family: Arial, sans-serif;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Using In-built Methods and Loops in JavaScript</h2>
+
+    <!-- Add an ID so JavaScript can find this element -->
+    <p id="output" class="output"></p>
+
+    <script>
+      var result = "";
+
+      // 1. Print current date
+      var currentDate = new Date();
+      result += "Current Date: " + currentDate + "<br><br>";
+
+      // 2. Print a random set of numbers (using a loop)
+      result += "Random Numbers:<br>";
+      for (var i = 1; i <= 5; i++) {
+        var randomNum = Math.random(); // generates a random number between 0 and 1
+        result += randomNum + "<br>";
+      }
+
+      // 3. Print a rounded random number
+      var roundedRandom = Math.round(Math.random() * 100);
+      result += "<br>Rounded Random Number (0–100): " + roundedRandom;
+document.getElementById("output").innerHTML = result;
+    </script>
+  </body>
+</html>
