@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Creating Functions in JS</title>
+</head>
+<body>
+  <h2>JavaScript Functions Output</h2>
+
+  <script>
+    // Function to find the sum of all arguments
+    function sumAll() {
+      let total = 0;
+      for (let i = 0; i < arguments.length; i++) {
+        total += arguments[i];
+      }
+      return total;
+    }
+
+    document.write("<b>Sum = </b>" + sumAll(10, 20, 30, 40) + "<br><br>");
+
+    // Function to print trigonometric values using built-in Math methods
+    function showTrigValues(angle) {
+      let radians = angle * (Math.PI / 180); // Convert degrees to radians
+
+      document.write("<b>Angle in degrees:</b> " + angle + "<br>");
+      document.write("sin: " + Math.sin(radians).toFixed(3) + "<br>");
+      document.write("cos: " + Math.cos(radians).toFixed(3) + "<br>");
+      document.write("tan: " + Math.tan(radians).toFixed(3) + "<br>");
+    }
+
+    showTrigValues(45);
+  </script>
+</body>
+</html>
