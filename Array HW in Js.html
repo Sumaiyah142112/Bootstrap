@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Array in JS</title>
+    </head>
+    <body>
+        <h1>Array in JS</h1>
+        <p id="demo"></p>
+        <p id="myjoin"></p>
+        <p id="myfirstpop"></p>
+        <script>
+            var colors = [
+                "Pink",
+                "Blue",
+                "Cream",
+                "Beige",
+                "Yellow",
+                "Purple"
+            ];
+            document.getElementById("demo").innerHTML = colors[2];
+            document.getElementById("myjoin").innerHTML = colors.join ("*");
+            colors.pop()
+            document.getElementById("myfirstpop").innerHTML = colors;
+        </script>
+    </body>
+    </html>
