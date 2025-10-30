@@ -1,0 +1,32 @@
+<html>
+    <body>
+        <h2>Js Class Inheritence HW</h2>
+        <p id="demo"></p>
+        <script>
+            class Name{
+                constructor(brand) { 
+                    this.name = name;
+
+                }
+          
+            present() {
+return 'I have a big house' + this.name;
+        }
+          }
+            class house extends Name{
+                constructor(name,house) {
+                    super(name);
+                    this.house = house;
+
+                }
+                show() {
+                    return this.present() + ' , it is a ' + this.house +".";
+                }
+            }
+            let myName = new house("Sam","Villa");
+            document.getElementById("demo").innerHTML = myName.show();
+        </script>
+    </body>
+
+ 
+</html>
