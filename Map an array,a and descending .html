@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <h1>Map an array and arrange in ascending and descending order!!</h1>
+       <p id="result"></p>
+        <button onclick="descending()">Descending order</button>
+        <button onclick="ascending()">Ascending order</button>
+       
+        <script>
+            var number = [40, 100, 5, 25, 10, 1];
+            function myfunction(num) {
+return num * 10;
+            }
+            var newarray = number.map(myfunction);
+            document.getElementById("result").innerHTML = newarray;
+             document.getElementById("result").innerHTML = point;
+            function ascending() {
+number.sort(function(a,b){return a - b});
+document.getElementById("result").innerHTML = number;
+            }
+             function descending() {
+number.sort(function(a,b){return b - a});
+document.getElementById("result").innerHTML = number;
+            }
+       </script>
+    </body>
+</html>
