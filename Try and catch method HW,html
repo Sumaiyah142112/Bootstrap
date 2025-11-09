@@ -1,0 +1,14 @@
+<html>
+    <body>
+        <h2>Try and catch method hw</h2>
+       <p id="Demo"></p>
+        <script>
+            try {
+                Array6;
+            }
+            catch(err) {
+                document.getElementById("Demo").innerHTML = err.message;
+            }
+        </script>
+    </body>
+</html>
