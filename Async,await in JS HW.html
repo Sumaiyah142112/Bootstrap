@@ -1,0 +1,35 @@
+<html>
+    <body>
+        <h1>Async/await VS Asynchronous in JS</h1>
+       <small><h2>Shows that <b>without await</b>, the result prints <b>before</b> the calculation <b>finishes</b>.<br>
+         <i><b>Asynchronous:</b></i> Things that don’t happen <b>immediately</b> and JS does not wait <br>automatically.<br>
+          <i><b>Async and Await</b></i>  are JavaScript keywords used to handle asynchronous operations more easily, making asynchronous code look and behave more like synchronous code.
+        </h2></small>
+        <h2 id="result"></h2>
+        <h2 id="demo"></h2>
+        <script>
+            async function add(s,a) {
+                let response = await s + a;
+display("Async, Await Result : " + response);
+            }
+function display(some) {
+    document.getElementById("result").innerHTML = some;
+}
+add(5,20);
+
+//Asynchronous Function 
+function delayedCalculation() {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve(5 + 5);   // calculation happens after 2 seconds
+        }, 2000);
+    });
+}
+       // Using the asynchronous function
+            delayedCalculation().then(demo => {
+             document.getElementById("demo").innerHTML =
+                    "Asynchronous Result : " + demo;
+            });      
+        </script>
+    </body>
+</html>
