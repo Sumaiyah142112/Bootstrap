@@ -1,0 +1,41 @@
+<html>
+    <body>
+        <h1>Validation Using API</h1>
+        <p>Enter your age and click OK:</p>
+
+        <input type="number" id="Id1" min="18" required>
+        <button onclick="myFunction()">OK</button>
+        <p id="result"></p>
+
+        <hr>
+
+        <form name="Myform" onsubmit="return validateForm()">
+            Name: <input type="text" name="fName">
+            <input type="submit" value="Submit">
+            <p id="message"></p>
+        </form>
+
+        <script>
+            function myFunction() {
+                var inpObj = document.getElementById("Id1");
+
+                if (!inpObj.checkValidity()) {
+                    document.getElementById("result").innerHTML = inpObj.validationMessage;
+                } else {
+                    document.getElementById("result").innerHTML = "Input OK";
+                }
+            }
+
+            function validateForm() {
+                var x = document.forms["Myform"]["fName"].value;
+
+                if (x == "") {
+                    alert("Name must be filled");
+                    return false;
+                }
+
+                return true;
+            }
+        </script>
+    </body>
+</html>
