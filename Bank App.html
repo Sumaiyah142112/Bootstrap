@@ -45,6 +45,23 @@
         <button class="btn reset-income">Reset Income</button>
         <button class="btn reset-expense">Reset Expense</button>
     </div>
+    <!-- Popup Background -->
+    <div id="popup-overlay">
+        <!-- Popup Box -->
+        <div id="popup-form">
+            <h2>Bank Details</h2>
+
+            <form onsubmit="event.preventDefault(); validateBankForm();">
+                <input type="text" id="name" placeholder="Name">
+                <input type="text" id="account" placeholder="Account Number">
+                <input type="text" id="ifsc" placeholder="IFSC Code">
+                <input type="number" id="amount" placeholder="Amount">
+                <input type="password" id="pin" placeholder="PIN">
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
     <script src="ScriptBank.js"></script>
 </body>
 
